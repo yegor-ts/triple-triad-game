@@ -42,9 +42,8 @@
 }
 
 .subheader {
-    color: white;
-    display: block;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 60px;
 }
 
 .call {
@@ -87,4 +86,10 @@
     .container {
         margin: 0 8px;
     }
+}
+
+.image {
+    background-image: url(../../assets/logo.png);
+    width: 512px;
+    height: 512px;
 }
