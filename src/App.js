@@ -75,14 +75,14 @@ function App() {
     const [characters, setCharacters] = useState(CHARACTERS);
 
     const handleLikeClick = (id) => {
-        const updatedCharacters = [...characters];
-        updatedCharacters.forEach((character) => {
+        const charactersCopy = [...characters];
+        charactersCopy.forEach((character) => {
             if (character.id === id) {
                 character.isLike = !character.isLike;
             }
         });
 
-        setCharacters(() => updatedCharacters);
+        setCharacters(() => charactersCopy);
     };
 
     return (
