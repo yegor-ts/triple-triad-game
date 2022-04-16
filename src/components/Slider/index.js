@@ -1,7 +1,7 @@
 import Heading from '../Heading';
 import Container from '../Container';
 
-import style from './Slider.module.css';
+import style from './Slider.module.scss';
 
 const Slider = () => {
     return (

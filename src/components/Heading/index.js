@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import style from './Heading.module.css';
+import style from './Heading.module.scss';
 
 const Heading = ({
     children,

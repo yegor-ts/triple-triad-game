@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png';
 
-import style from './Header.module.css';
+import style from './Header.module.scss';
 
 import Container from '../Container';
 

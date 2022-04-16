@@ -3,7 +3,7 @@ import Slider from './components/Slider/index';
 import Footer from './components/Footer/index';
 import Text from './components/Text/index';
 
-import './App.css';
+import './App.module.scss';
 
 function App() {
     return (
