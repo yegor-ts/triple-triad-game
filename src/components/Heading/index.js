@@ -8,13 +8,15 @@ const Heading = ({
     children,
     level,
     className,
-    black
+    black = false,
+    backLine
 }) => {
     const el = `h${level}`;
 
     return React.createElement(el, {
         className: classNames(style.root, className, style[`level${level}`], {
-            [style.colorBlack]: black
+            [style.colorBlack]: black,
+            [style.backLine]: backLine
         })
     }, children);
 }
@@ -24,6 +26,7 @@ Heading.propTypes = {
     level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
     className: PropTypes.string,
     black: PropTypes.bool,
+    backLine: PropTypes.bool
 }
 
 export default Heading;

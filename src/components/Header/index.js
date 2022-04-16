@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className={style.root}>
             <div className={style.header}>
-                <Container>
+                <Container className={style.flexWrap}>
                     <div>
                         <img src={logo} alt="logo" className={style.logo}/>
                     </div>
