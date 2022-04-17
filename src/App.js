@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import Header from './components/Header/index';
+import Slider from './components/Slider/index';
+import Footer from './components/Footer/index';
+import Text from './components/Text/index';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header/>
+            <Slider/>
+            <Text element="p" strong italic disabled>
+                Lorem Ipsum is slechts een proeftekst
+                uit het drukkerij- en zetterijwezen.
+            </Text>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;
