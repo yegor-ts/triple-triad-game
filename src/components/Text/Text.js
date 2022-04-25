@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import style from './Text.module.css';
+import style from './Text.module.scss';
 
 const Text = ({
     element,
