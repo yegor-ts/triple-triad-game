@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png';
 
-import style from './Header.module.css';
+import style from './Header.module.scss';
 
 import Container from '../Container';
 
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className={style.root}>
             <div className={style.header}>
-                <Container>
+                <Container className={style.flexWrap}>
                     <div>
                         <img src={logo} alt="logo" className={style.logo}/>
                     </div>
