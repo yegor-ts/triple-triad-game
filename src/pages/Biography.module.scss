@@ -1,0 +1,21 @@
+.root {
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 105px;
+    height: 41px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    margin: 5px 5px;
+  }
+}

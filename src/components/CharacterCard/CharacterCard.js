@@ -15,10 +15,15 @@ const CharacterCard = ({
     humanName,
     description,
     isLiked,
-    onLikeClick
+    onLikeClick,
+    onBioClick
 }) => {
     const handleClick = () => {
         onLikeClick(id);
+    };
+
+    const handleBioClick = () => {
+        onBioClick(id);
     };
 
     return (
@@ -43,7 +48,7 @@ const CharacterCard = ({
                     >
                         <Like/>
                     </div>
-                    <div className={style.readBio}>
+                    <div onClick={handleBioClick} className={style.readBio}>
                         <a href="#">Read bio</a>
                     </div>
                 </div>
@@ -62,7 +67,8 @@ CharacterCard.propTypes = {
     src: PropTypes.string,
     humanName: PropTypes.string,
     description: PropTypes.string,
-    onLikeClick: PropTypes.func
+    onLikeClick: PropTypes.func,
+    onBioClick: PropTypes.func
 };
 
 export default CharacterCard;
