@@ -5,14 +5,14 @@ import Footer from './components/Footer/index';
 import Container from './components/Container';
 import Heading from './components/Heading';
 import CharacterCard from './components/CharacterCard';
-import Biography from './pages/Biography';
+import Biography from './pages/Biography/Biography';
 import { CHARACTERS } from './components/CharacterCard/characters.data';
 
 import style from './App.module.scss';
 
 function App() {
     const [characters, setCharacters] = useState(CHARACTERS);
-    const [charId, setCharId] = useState();
+    const [characterId, setCharacterId] = useState();
 
     const handleLikeClick = (id) => {
         setCharacters(prevState => prevState.map((character) => {
@@ -24,15 +24,15 @@ function App() {
     };
 
     const handleBioClick = (id) => {
-        setCharId(id);
+        setCharacterId(id);
     };
 
-    if (charId) {
+    if (characterId) {
         return (
             <>
                 <Header />
                 <Container>
-                    <Biography onBackClick={handleBioClick} id={charId}/>
+                    <Biography onBackClick={handleBioClick} id={characterId}/>
                 </Container>
                 <Footer />
             </>

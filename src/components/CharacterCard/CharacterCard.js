@@ -19,11 +19,11 @@ const CharacterCard = ({
     onBioClick
 }) => {
     const handleClick = () => {
-        onLikeClick(id);
+        onLikeClick && onLikeClick(id);
     };
 
     const handleBioClick = () => {
-        onBioClick(id);
+        onBioClick && onBioClick(id);
     };
 
     return (
@@ -48,8 +48,8 @@ const CharacterCard = ({
                     >
                         <Like/>
                     </div>
-                    <div onClick={handleBioClick} className={style.readBio}>
-                        <a href="#">Read bio</a>
+                    <div className={style.readBio}>
+                        <a href="#" onClick={handleBioClick}>Read bio</a>
                     </div>
                 </div>
             </div>

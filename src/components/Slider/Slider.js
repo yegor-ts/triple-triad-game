@@ -11,7 +11,7 @@ const Slider = () => {
                 <Container className={style.sliderContent}>
                     <Heading level={1} backLine>Triple Triad Game</Heading>
                     <Heading level={2} className={style.subheader}>Wow Wow Wow</Heading>
-                    <Button />
+                    <Button>Wow</Button>
                 </Container>
             </div>
         </section>

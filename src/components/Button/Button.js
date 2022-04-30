@@ -1,24 +1,35 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import style from './Button.module.scss';
 
-const Button = ({ buttonText, black }) => (
-  <div className={style.root}>
-      <button className={classNames(style.button, {
-          [style.black]: black
-      })}>{buttonText}</button>
-  </div>
-);
+const Button = ({
+    color,
+    onClick,
+    children,
+}) => {
+    const handleClick = () => {
+        onClick && onClick();
+    };
 
-Button.propTypes = {
-    buttonText: PropTypes.string,
-    black: PropTypes.bool
+    return (
+        <button
+            className={classNames(style.root, style[color])}
+            onClick={handleClick}
+        >
+            {children}
+        </button>
+    );
 };
 
 Button.defaultProps = {
-    buttonText: 'Wow'
+    color: 'default',
+};
+
+Button.propTypes = {
+    color: PropTypes.oneOf(['default', 'black']),
+    onClick: PropTypes.func,
+    children: PropTypes.node,
 };
 
 export default Button;
