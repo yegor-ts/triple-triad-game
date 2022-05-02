@@ -8,14 +8,14 @@ function Heading({ children, level, className, black = false, backLine }) {
   const el = `h${level}`;
 
   return React.createElement(
-    el,
-    {
-      className: classNames(style.root, className, style[`level${level}`], {
-        [style.colorBlack]: black,
-        [style.backLine]: backLine,
-      }),
-    },
-    children,
+      el,
+      {
+        className: classNames(style.root, className, style[`level${level}`], {
+          [style.colorBlack]: black,
+          [style.backLine]: backLine,
+        }),
+      },
+      children,
   );
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const CHARACTERS = [
   {
     id: 1011334,
@@ -36,7 +37,7 @@ export const CHARACTERS = [
     id: 1127131,
     name: 'Iron Man',
     description:
-      "Genius. Billionaire. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man.",
+      'Genius. Billionaire. Philanthropist. Tony Stark\'s confidence is only matched by his high-flying abilities as the hero called Iron Man.',
     thumbnail: {
       path: 'https://firebasestorage.googleapis.com/v0/b/it-course-84ddd.appspot.com/o/marvel-game%2Firon-man.png?alt=media&token=e9a4443f-0dbc-4f49-aef9-7f8e7b261fab',
     },

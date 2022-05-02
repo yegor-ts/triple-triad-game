@@ -6,15 +6,15 @@ import style from './Text.module.scss';
 
 function Text({ element, children, className, strong, italic, disabled }) {
   return React.createElement(
-    element,
-    {
-      className: classNames(className, {
-        [style.strong]: strong,
-        [style.italic]: italic,
-        [style.disabled]: disabled,
-      }),
-    },
-    children,
+      element,
+      {
+        className: classNames(className, {
+          [style.strong]: strong,
+          [style.italic]: italic,
+          [style.disabled]: disabled,
+        }),
+      },
+      children,
   );
 }
 

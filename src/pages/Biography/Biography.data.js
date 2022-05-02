@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const BIO = {
   1011334: [
     {
