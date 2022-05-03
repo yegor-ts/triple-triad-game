@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import style from './Text.module.scss';
 
-function Text({ element, children, className, strong, italic, disabled }) {
+const Text = ({ element, children, className, strong, italic, disabled }) => {
   return React.createElement(
       element,
       {
@@ -16,7 +16,7 @@ function Text({ element, children, className, strong, italic, disabled }) {
       },
       children,
   );
-}
+};
 
 Text.propTypes = {
   element: PropTypes.oneOf(['div', 'p', 'span']).isRequired,

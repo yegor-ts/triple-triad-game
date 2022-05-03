@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Heading from '../Heading';
@@ -7,7 +8,7 @@ import { ReactComponent as Like } from './assets/heart.svg';
 
 import style from './CharacterCard.module.scss';
 
-function CharacterCard({
+const CharacterCard = ({
   id,
   name,
   src,
@@ -15,14 +16,9 @@ function CharacterCard({
   description,
   isLiked,
   onLikeClick,
-  onBioClick,
-}) {
+}) => {
   const handleClick = () => {
     onLikeClick && onLikeClick(id);
-  };
-
-  const handleBioClick = () => {
-    onBioClick && onBioClick(id);
   };
 
   return (
@@ -48,16 +44,13 @@ function CharacterCard({
             <Like />
           </div>
           <div className={style.readBio}>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="#" onClick={handleBioClick}>
-              Read bio
-            </a>
+            <Link to={`/characters/${id}`}>Read bio</Link>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 CharacterCard.defaultProps = {
   isLiked: false,
@@ -71,7 +64,6 @@ CharacterCard.propTypes = {
   description: PropTypes.string,
   isLiked: PropTypes.bool,
   onLikeClick: PropTypes.func,
-  onBioClick: PropTypes.func,
 };
 
 export default CharacterCard;

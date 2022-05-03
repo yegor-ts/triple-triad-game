@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import style from './Button.module.scss';
 
-function Button({ color, onClick, children }) {
+const Button = ({ color, onClick, children }) => {
   const handleClick = () => {
     onClick && onClick();
   };
@@ -16,7 +16,7 @@ function Button({ color, onClick, children }) {
       {children}
     </button>
   );
-}
+};
 
 Button.defaultProps = {
   color: 'default',

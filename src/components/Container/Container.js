@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import style from './Container.module.scss';
 
-function Container({ children, className }) {
+const Container = ({ children, className }) => {
   return <div className={classNames(style.root, className)}>{children}</div>;
-}
+};
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,

@@ -2,7 +2,7 @@ import Container from '../Container';
 
 import style from './Footer.module.scss';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className={style.root}>
       <Container>
@@ -14,6 +14,6 @@ function Footer() {
       </Container>
     </footer>
   );
-}
+};
 
 export default Footer;

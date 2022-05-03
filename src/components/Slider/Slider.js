@@ -4,7 +4,7 @@ import Button from '../Button';
 
 import style from './Slider.module.scss';
 
-function Slider() {
+const Slider = () => {
   return (
     <section className={style.section}>
       <div className={style.slider}>
@@ -20,6 +20,6 @@ function Slider() {
       </div>
     </section>
   );
-}
+};
 
 export default Slider;

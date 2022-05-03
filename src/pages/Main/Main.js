@@ -6,9 +6,9 @@ import CharacterCard from '../../components/CharacterCard';
 
 import style from './Main.module.scss';
 
-import { CHARACTERS } from '../../components/CharacterCard/characters.data';
+import { CHARACTERS } from '../Character/characters.data';
 
-function Main() {
+const Main = () => {
   const [characters, setCharacters] = useState(CHARACTERS);
 
   const handleLikeClick = (id) => {
@@ -52,6 +52,6 @@ function Main() {
       </section>
     </>
   );
-}
+};
 
 export default Main;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import style from './Heading.module.scss';
 
-function Heading({ children, level, className, black = false, backLine }) {
+const Heading = ({ children, level, className, black = false, backLine }) => {
   const el = `h${level}`;
 
   return React.createElement(
@@ -17,7 +17,7 @@ function Heading({ children, level, className, black = false, backLine }) {
       },
       children,
   );
-}
+};
 
 Heading.propTypes = {
   children: PropTypes.node,

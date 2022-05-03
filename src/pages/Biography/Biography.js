@@ -6,7 +6,7 @@ import { BIO } from './Biography.data';
 
 import style from './Biography.module.scss';
 
-function Biography() {
+const Biography = () => {
   const { id } = useParams();
 
   return (
@@ -52,6 +52,6 @@ function Biography() {
       </Container>
     </div>
   );
-}
+};
 
 export default Biography;
