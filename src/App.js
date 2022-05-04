@@ -1,79 +1,37 @@
-import { useState } from 'react';
-import Header from './components/Header/index';
-import Slider from './components/Slider/index';
-import Footer from './components/Footer/index';
-import Container from './components/Container';
-import Heading from './components/Heading';
-import CharacterCard from './components/CharacterCard';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Main from './pages/Main/Main';
 import Biography from './pages/Biography/Biography';
-import { CHARACTERS } from './components/CharacterCard/characters.data';
+import Layout from './components/Layout';
+import AboutGame from './pages/AboutGame/AboutGame';
+import Contacts from './pages/Contacts/Contacts';
+import CharactersWrap from './components/CharactersWrap';
+import Characters from './pages/Characters/Characters';
+import NotFound from './pages/NotFound/NotFound';
 
-import style from './App.module.scss';
+const App = () => {
+  const { pathname, hash } = useLocation();
 
-function App() {
-    const [characters, setCharacters] = useState(CHARACTERS);
-    const [characterId, setCharacterId] = useState();
-
-    const handleLikeClick = (id) => {
-        setCharacters(prevState => prevState.map((character) => {
-            if (character.id === id) {
-                character.isLike = !character.isLike;
-            }
-            return character;
-        }));
-    };
-
-    const handleBioClick = (id) => {
-        setCharacterId(id);
-    };
-
-    if (characterId) {
-        return (
-            <>
-                <Header />
-                <Container>
-                    <Biography onBackClick={handleBioClick} id={characterId}/>
-                </Container>
-                <Footer />
-            </>
-        );
-    } else {
-        return (
-                    <>
-                        <Header />
-                        <Slider />
-                        <section className={style.cardSection}>
-                            <Container>
-                                <div className={style.cardTitle}>
-                                    <Heading level={1} backLine>
-                                        Marvel Cards
-                                    </Heading>
-                                    <Heading level={2}>
-                                        Collect your best five
-                                    </Heading>
-                                </div>
-                                <div className={style.cardWrap}>
-                                    {characters.map((character) => {
-                                        return <div>
-                                            <CharacterCard
-                                                id={character.id}
-                                                name={character.name}
-                                                description={character.description}
-                                                src={character.thumbnail.path}
-                                                humanName={character.humanName}
-                                                isLiked={character.isLike}
-                                                onLikeClick={handleLikeClick}
-                                                onBioClick={handleBioClick}
-                                            />
-                                        </div>
-                                    })}
-                                </div>
-                            </Container>
-                        </section>
-                        <Footer/>
-                    </>
-                );
-    }
-}
+  useEffect(() => {
+    hash ? document
+        .querySelector(hash)
+        .scrollIntoView({ block: 'center', behavior: 'smooth' }) :
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname, hash]);
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
+        <Route path="characters" element={<CharactersWrap />}>
+          <Route index element={<Characters />} />
+          <Route path=":id" element={<Biography />} />
+        </Route>
+        <Route path="about" element={<AboutGame />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
+};
 
 export default App;
