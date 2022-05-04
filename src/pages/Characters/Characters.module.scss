@@ -7,8 +7,11 @@
   }
 
   .cardWrap {
+    padding: 24px 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 4px;
+    row-gap: 32px;
+    column-gap: 24px;
   }
 }

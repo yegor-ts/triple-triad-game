@@ -4,9 +4,9 @@ import Heading from '../../components/Heading';
 import { CHARACTERS } from './characters.data';
 import CharacterCard from '../../components/CharacterCard';
 
-import style from './Character.module.scss';
+import style from './Characters.module.scss';
 
-const Character = () => {
+const Characters = () => {
   const [characters, setCharacters] = useState();
 
   const handleLikeClick = (id) => {
@@ -46,4 +46,4 @@ const Character = () => {
   );
 };
 
-export default Character;
+export default Characters;

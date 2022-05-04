@@ -6,7 +6,7 @@ import CharacterCard from '../../components/CharacterCard';
 
 import style from './Main.module.scss';
 
-import { CHARACTERS } from '../Character/characters.data';
+import { CHARACTERS } from '../Characters/characters.data';
 
 const Main = () => {
   const [characters, setCharacters] = useState(CHARACTERS);

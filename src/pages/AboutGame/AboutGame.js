@@ -2,18 +2,20 @@ import Container from '../../components/Container';
 import Text from '../../components/Text';
 
 import style from './AboutGame.module.scss';
+import Heading from '../../components/Heading';
 
 const AboutGame = () => {
   return (
     <div className={style.root}>
       <Container>
+        <Heading level={1}>About Game</Heading>
         <Text element="p">
           Triple Triad is played on a blank 3-by-3 square game board. Squall
           plays against one opponent at a time in turn-based gameplay. Both
           players have five cards in their hand at the start of the game. The
           absolute simplest explanation of the game is that it plays like the
-          card game, WAR. A number on one player's card will be played against
-          a number on the other player's card. The high number wins the turn.
+          card game, WAR. A number on one player's card will be played against a
+          number on the other player's card. The high number wins the turn.
         </Text>
         <Text element="p">
           Each player is assigned a color at the start of the game, either red
@@ -25,13 +27,13 @@ const AboutGame = () => {
           which player has won the turn and is currently winning the game.
         </Text>
         <Text element="p">
-          When a card changes to the player's color, this is called capturing
-          a card. If it is not their turn, the player cannot capture any cards.
-          A card may change colors multiple times during play. Multiple cards
-          may change color during a turn. Once the grid is filled with cards,
-          the game is determined to be a win/loss or a draw. At this point,
-          the player that has the most cards of their color on the grid wins
-          the game.
+          When a card changes to the player's color, this is called capturing a
+          card. If it is not their turn, the player cannot capture any cards. A
+          card may change colors multiple times during play. Multiple cards may
+          change color during a turn. Once the grid is filled with cards, the
+          game is determined to be a win/loss or a draw. At this point, the
+          player that has the most cards of their color on the grid wins the
+          game.
         </Text>
         <Text element="p">
           Each card in this mini-game features four numbers that form a cross in
@@ -39,8 +41,8 @@ const AboutGame = () => {
           which is number 10. Each number in the cross corresponds to a side of
           the card. Creatures and characters are used as card art. Cards may
           also have an elemental icon, which is specific to the Elemental rule
-          set, and is not in play unless there are also elemental icons
-          on the grid.
+          set, and is not in play unless there are also elemental icons on the
+          grid.
         </Text>
         <Text element="p">
           A card may be played anywhere on the Triple Triad grid, including
@@ -64,8 +66,8 @@ const AboutGame = () => {
           rules in play, the game may end here, with no cards exchanged. Or, it
           may result in a sudden death scenario where the grid is cleared, and
           the game is played until one player wins. Again, depending on the
-          rules in effect, the winner will claim a prize of one of
-          the loser's card.
+          rules in effect, the winner will claim a prize of one of the loser's
+          card.
         </Text>
       </Container>
     </div>
