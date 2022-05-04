@@ -14,3 +14,24 @@
   padding: 12px 0;
   text-align: center;
 }
+
+.marginTop {
+  margin-top: 30px;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+
+  .anchor {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .anchor:hover {
+    opacity: 1;
+  }
+}

@@ -67,3 +67,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.nav li a.active {
+    font-weight: bold;
+    color: rgba(196, 77, 86);
+}

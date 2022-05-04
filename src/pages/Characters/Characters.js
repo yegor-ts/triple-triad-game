@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Container from '../../components/Container';
 import Heading from '../../components/Heading';
-import { CHARACTERS } from './characters.data';
 import CharacterCard from '../../components/CharacterCard';
+import { CHARACTERS } from './characters.data';
 
 import style from './Characters.module.scss';
 
